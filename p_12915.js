@@ -25,8 +25,8 @@
   4. 최종 strings 출력
 */
 
-let string1 = ["sun", "bed", "car"];
-let string2 = ["abce", "abcd", "cdx"];
+// let string1 = ["sun", "bed", "car"];
+// let string2 = ["abce", "abcd", "cdx"];
 
 function solution(strings, n) {
   let answer = [];
@@ -51,28 +51,3 @@ function solution(strings, n) {
 
 // console.log(solution(string1, 1));
 // console.log(solution(string2, 2));
-
-/* -------------------------------- */
-
-// 안되는 이유: word는 지역 변수 => forEach문을 벗어나지 못함
-function solution1(strings, n) {
-  // n번재 글자를 각 원소의 제일 앞 글자로 추가
-  strings.forEach((word) => {
-    word = word[n] + word;
-  });
-
-  return strings;
-}
-
-console.log(solution1(string1, 1));
-
-/*
-  [내가 생각한 초기 해결 방법]
-  1. 최종 결과를 출력할 변수 선언
-  2. strings의 각 원소의 n번째 인덱스의 문자에 접근
-  3. 해당 문자들을 뽑아 배열로 생성
-  4. 해당 배열을 정렬
-  4-1. 동일한 문자가 나왔을 시, strings 각 원소 자체를 사전순으로 정렬 (근데 어떻게?)
-  5. 인덱스 배열의 정렬 상태에 따라 strings의 원소들을 정렬 (인덱스 배열 -> strings 배열 연동 how?)
-  6. 결과 출력
-*/
