@@ -31,7 +31,70 @@
   [[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]]   =>  133(=19x7)
 */
 
+/* [접근]
+  1. 명함을 회전시킬 수 있기 때문에, 가로와 세로라는 건 큰 의미가 없다.
+     따라서, 명칭을 각 명함에서 길이가 큰 부분, 작은 부분으로 칭한다.
+  2. 조건의 요구사항은 모든 명함을 수납하는 것이기 때문에,
+     각 명함에서 길이가 큰 부분 중 가장 큰 값, 각 명함에서 길이가 가장 작은 부분 중 가장 큰 값을 구하면 모든 명함을 수납 가능하다.
+  3. 지갑의 크기 = Longest of long part * Longest of short part
+*/
+
+/*
+  [해결 방법]
+  1. 지갑의 크기와 지갑의 너비, 높이를 저장할 변수를 선언
+  2. 반복문을 사용하여 전체 명함을 순회
+  2-1. 각 명함의 긴 부분과 짧은 부분을 저장
+  2-2. 각 명함의 긴 부분을 비교하여 최대값을 지갑의 너비에,
+       짧은 부분을 비교하여 최대값을 지갑의 높이에 반영
+  3. (크기 = 너비 * 높이)를 계산하여 결과 출력
+*/
+
+// let cards1 = [
+//   [60, 50],
+//   [30, 70],
+//   [60, 30],
+//   [80, 40],
+// ];
+// let cards2 = [
+//   [10, 7],
+//   [12, 3],
+//   [8, 15],
+//   [14, 7],
+//   [5, 15],
+// ];
+// let cards3 = [
+//   [14, 4],
+//   [19, 6],
+//   [6, 16],
+//   [18, 7],
+//   [7, 11],
+// ];
+
 function solution(sizes) {
-  var answer = 0;
+  let answer = 0; // 지갑의 크기
+
+  let maxWidth = 0; // 지갑의 너비
+  let maxHeight = 0; // 지갑의 높이
+
+  // 각 명함 순회
+  sizes.forEach(([w, h]) => {
+    // 각 명함의 긴 부분, 짧은 부분을 변수로 선언
+    const longerLength = Math.max(w, h);
+    const shorterLength = Math.min(w, h);
+
+    // 각 명함을 돌며, 가장 긴 부분과 짧은 부분의 최대값을 최신화
+    maxWidth = Math.max(longerLength, maxWidth);
+    maxHeight = Math.max(shorterLength, maxHeight);
+  });
+
+  // 지갑의 너비 = 긴 부분의 최대값 * 짧은 부분의 최대값
+  answer = maxWidth * maxHeight;
+
+  // 결과 출력
   return answer;
 }
+
+// console.log(solution(cards1));
+// console.log(solution(cards2));
+// console.log(solution(cards3));
+// console.log(solution(cards4));
