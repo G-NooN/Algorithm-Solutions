@@ -26,6 +26,9 @@
   5. 결과를 출력한다.
 */
 
+// let string1 = "pPoooyY";
+// let string2 = "Pyy";
+
 function solution(s) {
   // p와 y의 개수를 count할 변수
   let alphabetCount = 0;
@@ -46,27 +49,30 @@ function solution(s) {
   return answer;
 }
 
+// console.log(solution(string1));
+// console.log(solution(string2));
+
 /* -------------------------------- */
 
-// 초기 코드
-let string1 = "pPoooyY";
-let string2 = "Pyy";
+// // 초기 코드
+// let string1 = "pPoooyY";
+// let string2 = "Pyy";
 
-function solution(s) {
-  let pCount = 0; // p의 개수를 세는 변수
-  let yCount = 0; // y의 개수를 세는 변수
+// function solution(s) {
+//   let pCount = 0; // p의 개수를 세는 변수
+//   let yCount = 0; // y의 개수를 세는 변수
 
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === "p" || s[i] === "P") pCount++; // p, P 발견 시 pCount+1
-    if (s[i] === "y" || s[i] === "Y") yCount++; // y, Y 발견 시 yCount+1
-  }
+//   for (let i = 0; i < s.length; i++) {
+//     if (s[i] === "p" || s[i] === "P") pCount++; // p, P 발견 시 pCount+1
+//     if (s[i] === "y" || s[i] === "Y") yCount++; // y, Y 발견 시 yCount+1
+//   }
 
-  // pCount의 값과 yCount의 값을 비교하여 같으면 true, 다르면 false 반환
-  let answer = pCount === yCount ? true : false;
+//   // pCount의 값과 yCount의 값을 비교하여 같으면 true, 다르면 false 반환
+//   let answer = pCount === yCount ? true : false;
 
-  // 결과 출력
-  return answer;
-}
+//   // 결과 출력
+//   return answer;
+// }
 
-console.log(solution(string1));
-console.log(solution(string2));
+// console.log(solution(string1));
+// console.log(solution(string2));
