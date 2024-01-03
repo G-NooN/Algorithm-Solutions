@@ -1,25 +1,15 @@
-# Algorithm Solutions
+## Solved Algorithms
 
-## Solved
+Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 
-### \[Programmers\]
-
-1. **#12915** (Lv. 1) - 문자열 내 마음대로 정렬하기 ([Link](https://school.programmers.co.kr/learn/courses/30/lessons/12915))
-2. **#12916** (Lv. 1) - 문자열 내 p와 y의 개수 ([Link](https://school.programmers.co.kr/learn/courses/30/lessons/12916))
-3. **#76501** (Lv. 1) - 음양 더하기 ([Link](https://school.programmers.co.kr/learn/courses/30/lessons/76501))
-4. **#86491** (Lv. 1) - 최소직사각형 ([Link](https://school.programmers.co.kr/learn/courses/30/lessons/86491))
-
-### \[BaekJoon\]
-
-1.
-
----
-
-## Solving
+## Trial & Error
 
 ### \[Programmers\]
 
-1.
+1. **#12915** (Lv. 1) - 문자열 내 마음대로 정렬하기 ([Velog](https://velog.io/@gnoon/20231229-Today-I-Learned) / [Tistory](https://g-noon.tistory.com/entry/20231229-Today-I-Learned))
+2. **#12916** (Lv. 1) - 문자열 내 p와 y의 개수 ([Velog](https://velog.io/@gnoon/Programmers-12916) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12916))
+3. **#76501** (Lv. 1) - 음양 더하기 ([Velog](https://velog.io/@gnoon/Programmers-76501) / [Tistory](https://g-noon.tistory.com/entry/Programmers-76501))
+4. **#86491** (Lv. 1) - 최소직사각형 ([Velog](https://velog.io/@gnoon/Programmers-86491) / [Tistory](https://g-noon.tistory.com/entry/Programmers-86491))
 
 ### \[BaekJoon\]
 
