@@ -14,6 +14,9 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 6. **#12931** (Lv. 1) - 자릿수 더하기 ([Velog](https://velog.io/@gnoon/Programmers-12931) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12931))
 7. **#12934** (Lv. 1) - 정수 제곱근 판별 ([Velog](https://velog.io/@gnoon/Programmers-12934) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12934))
 8. **#12954** (Lv. 1) - x만큼 간격이 있는 n개의 숫자 ([Velog](https://velog.io/@gnoon/Programmers-12954) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12954))
+9. **#12933** (Lv. 1) - 정수 내림차순으로 배치하기 ([Velog](https://velog.io/@gnoon/Programmers-12933) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12933))
+10. **#12947** (Lv. 1) - 하샤드 수 ([Velog](https://velog.io/@gnoon/Programmers-12947) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12947))
+11. **#12912** (Lv. 1) - 두 정수 사이의 합 ([Velog](https://velog.io/@gnoon/Programmers-12912) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12912))
 
 ### \[BaekJoon\]
 
