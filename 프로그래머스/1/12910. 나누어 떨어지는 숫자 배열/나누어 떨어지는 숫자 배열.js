@@ -1,9 +1,7 @@
 function solution(arr, divisor) {
     let answer = [];
     
-    let dividedArray = arr.filter((element) => {
-        return element % divisor === 0;
-    });
+    let dividedArray = arr.filter((element) => element % divisor === 0);
     
     if(dividedArray.length === 0) {
         answer = [-1];
