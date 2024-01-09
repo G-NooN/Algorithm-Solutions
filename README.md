@@ -19,6 +19,8 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 11. **#12912** (Lv. 1) - 두 정수 사이의 합 ([Velog](https://velog.io/@gnoon/Programmers-12912) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12912))
 12. **#12910** (Lv. 1) - 나누어 떨어지는 숫자 배열 ([Velog](https://velog.io/@gnoon/Programmers-12910) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12910))
 13. **#12919** (Lv. 1) - 서울에서 김서방 찾기 ([Velog](https://velog.io/@gnoon/Programmers-12919) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12919))
+14. **#12943** (Lv. 1) - 콜라츠 추측 ([Velog](https://velog.io/@gnoon/Programmers-12943) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12943))
+15. **#12948** (Lv. 1) - 핸드폰 번호 가리기 ([Velog](https://velog.io/@gnoon/Programmers-12948) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12948))
 
 ### \[BaekJoon\]
 
