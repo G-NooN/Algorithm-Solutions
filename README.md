@@ -21,6 +21,7 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 13. **#12919** (Lv. 1) - 서울에서 김서방 찾기 ([Velog](https://velog.io/@gnoon/Programmers-12919) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12919))
 14. **#12943** (Lv. 1) - 콜라츠 추측 ([Velog](https://velog.io/@gnoon/Programmers-12943) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12943))
 15. **#12948** (Lv. 1) - 핸드폰 번호 가리기 ([Velog](https://velog.io/@gnoon/Programmers-12948) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12948))
+16. **#12903** (Lv. 1) - 가운데 글자 가져오기 ([Velog](https://velog.io/@gnoon/Programmers-12903) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12903))
 
 ### \[BaekJoon\]
 
