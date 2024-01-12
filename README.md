@@ -24,6 +24,7 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 16. **#12903** (Lv. 1) - 가운데 글자 가져오기 ([Velog](https://velog.io/@gnoon/Programmers-12903) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12903))
 17. **#86051** (Lv. 1) - 없는 숫자 더하기 ([Velog](https://velog.io/@gnoon/Programmers-86051) / [Tistory](https://g-noon.tistory.com/entry/Programmers-86051))
 18. **#12935** (Lv. 1) - 제일 작은 수 제거하기 ([Velog](https://velog.io/@gnoon/Programmers-12935) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12935))
+19. **#12922** (Lv. 1) - 수박수박수박수박수? ([Velog](https://velog.io/@gnoon/Programmers-12922) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12922))
 
 ### \[BaekJoon\]
 
