@@ -1,11 +1,7 @@
 function solution(a, b) {
-    var answer = 1234567890;
-     let sum = 0;
+    let answer = 1234567890;
+    
+    answer = a.reduce((acc, cur, idx) => (acc += cur * b[idx]), 0);
 
-  for(let i=0; i<a.length; i++) {
-    sum += a[i]*b[i];
-  }
-
-  answer = sum;
     return answer;
 }
