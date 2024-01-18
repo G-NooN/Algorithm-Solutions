@@ -28,6 +28,7 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 20. **#70128** (Lv. 1) - 내적 ([Velog](https://velog.io/@gnoon/Programmers-70128) / [Tistory](https://g-noon.tistory.com/entry/Programmers-70128))
 21. **#77884** (Lv. 1) - 약수의 개수와 덧셈 ([Velog](https://velog.io/@gnoon/Programmers-77884) / [Tistory](https://g-noon.tistory.com/entry/Programmers-77884))
 22. **#82612** (Lv. 1) - 부족한 금액 계산하기 ([Velog](https://velog.io/@gnoon/Programmers-82612) / [Tistory](https://g-noon.tistory.com/entry/Programmers-82612))
+23. **#12918** (Lv. 1) - 문자열 다루기 기본 ([Velog](https://velog.io/@gnoon/Programmers-12918) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12918))
 
 ### \[BaekJoon\]
 
