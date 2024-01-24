@@ -31,6 +31,7 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 23. **#12918** (Lv. 1) - 문자열 다루기 기본 ([Velog](https://velog.io/@gnoon/Programmers-12918) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12918))
 24. **#12950** (Lv. 1) - 행렬의 덧셈 ([Velog](https://velog.io/@gnoon/Programmers-12950) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12950))
 25. **#12940** (Lv. 1) - 최대공약수와 최소공배수 ([Velog](https://velog.io/@gnoon/Programmers-12940) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12940))
+26. **#68935** (Lv. 1) - 3진법 뒤집기 ([Velog](https://velog.io/@gnoon/Programmers-68935) / [Tistory](https://g-noon.tistory.com/entry/Programmers-68935))
 
 ### \[BaekJoon\]
 
