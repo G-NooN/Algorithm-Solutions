@@ -34,6 +34,7 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 26. **#68935** (Lv. 1) - 3진법 뒤집기 ([Velog](https://velog.io/@gnoon/Programmers-68935) / [Tistory](https://g-noon.tistory.com/entry/Programmers-68935))
 27. **#12930** (Lv. 1) - 이상한 문자 만들기 ([Velog](https://velog.io/@gnoon/Programmers-12930) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12930))
 28. **#131705** (Lv. 1) - 삼총사 ([Velog](https://velog.io/@gnoon/Programmers-131705) / [Tistory](https://g-noon.tistory.com/entry/Programmers-131705))
+29. **#147355** (Lv. 1) - 크기가 작은 부분 문자열 ([Velog](https://velog.io/@gnoon/Programmers-147355) / [Tistory](https://g-noon.tistory.com/entry/Programmers-147355))
 
 ### \[BaekJoon\]
 
