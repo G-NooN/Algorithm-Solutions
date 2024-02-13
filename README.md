@@ -36,6 +36,7 @@ Programmers/Baekjoon - GitHub 연동을 통한 자동 업데이트
 28. **#131705** (Lv. 1) - 삼총사 ([Velog](https://velog.io/@gnoon/Programmers-131705) / [Tistory](https://g-noon.tistory.com/entry/Programmers-131705))
 29. **#147355** (Lv. 1) - 크기가 작은 부분 문자열 ([Velog](https://velog.io/@gnoon/Programmers-147355) / [Tistory](https://g-noon.tistory.com/entry/Programmers-147355))
 30. **#12926** (Lv. 1) - 시저 암호 ([Velog](https://velog.io/@gnoon/Programmers-12926) / [Tistory](https://g-noon.tistory.com/entry/Programmers-12926))
+31. **#81301** (Lv. 1) - 시저 암호 ([Velog](https://velog.io/@gnoon/Programmers-81301))
 
 ### \[BaekJoon\]
 
