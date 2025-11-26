@@ -1,6 +1,7 @@
 // NOTE - 백준 제출용 (JavaScript)
+// readFileSync(0 또는 '/dev/stdin' 사용)
 // const fs = require("fs");
-// const input = fs.readFileSync("/dev/stdin").toString().trim();
+// const input = fs.readFileSync(0).toString().trim();
 
 // NOTE - 내부 테스트용 (TypeScript)
 import fs from "fs";
@@ -14,17 +15,6 @@ const input = fs.readFileSync("./baekjoon-test-input.txt").toString().trim();
 
 /** ----------코드 작성 지점---------- **/
 
-const array = input.split(" ");
+const solution = () => {};
 
-const a = Number(array[0]);
-const b = Number(array[1]);
-
-const solution = (a: number, b: number) => {
-  console.log(a + b);
-  console.log(a - b);
-  console.log(a * b);
-  console.log(Math.floor(a / b));
-  console.log(a % b);
-};
-
-solution(a, b);
+solution();
