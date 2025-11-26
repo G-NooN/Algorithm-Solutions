@@ -7,17 +7,13 @@ const solution = (a: string, b: string) => {
   const num1 = Number(a);
   const num2 = Number(b);
 
-  let result = "";
-
   if (num1 > num2) {
-    result = ">";
+    console.log(">");
   } else if (num1 < num2) {
-    result = "<";
+    console.log("<");
   } else {
-    result = "==";
+    console.log("==");
   }
-
-  console.log(result);
 };
 
 solution(array[0], array[1]);
