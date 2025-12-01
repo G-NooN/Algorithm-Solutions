@@ -8,15 +8,8 @@ const [, target] = targetArray.split(" ");
 const values = valueArray.split(" ");
 
 const solution = () => {
-  let result = "";
-
-  values.forEach((value) => {
-    if (Number(value) < Number(target)) {
-      result += `${value} `;
-    }
-  });
-
-  console.log(result);
+  const targetValues = values.filter((value) => Number(value) < Number(target));
+  console.log(targetValues.join(" "));
 };
 
 solution();
