@@ -5,16 +5,6 @@
  * - 링크 : https://www.acmicpc.net/problem/25304
  */
 
-/**
- * 입력 형태
- * 260000
- * 4
- * 8 20000 5
- * 30000 2
- * 10000 6
- * 5000 8
- */
-
 // NOTE - 공통 상위 코드
 import fs from "fs";
 const input = fs.readFileSync("./baekjoon-test-input.txt").toString().trim();

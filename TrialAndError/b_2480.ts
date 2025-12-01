@@ -5,13 +5,9 @@
  * - 링크 : https://www.acmicpc.net/problem/2480
  */
 
-/**
- * 입력 형태 : 한 줄에 3개 (ex. 3 3 6)
- */
-
 // NOTE - 공통 상위 코드
-const fs = require("fs");
-const input = fs.readFileSync(0).toString().trim();
+import fs from "fs";
+const input = fs.readFileSync("./baekjoon-test-input.txt").toString().trim();
 
 const array = input.split(" ");
 
