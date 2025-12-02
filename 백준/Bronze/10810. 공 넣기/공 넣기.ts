@@ -10,9 +10,7 @@ const solution = () => {
 
   valuesArray.forEach((value) => {
     const [startIndex, endIndex, number] = value.split(" ").map(Number);
-    for (let i = startIndex; i <= endIndex; i++) {
-      basketArray[i - 1] = number;
-    }
+    basketArray.fill(number, startIndex - 1, endIndex);
   });
 
   console.log(basketArray.join(" "));
