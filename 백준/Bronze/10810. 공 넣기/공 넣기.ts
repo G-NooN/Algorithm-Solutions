@@ -3,20 +3,17 @@ const input = fs.readFileSync(0).toString().trim();
 
 const [targetArray, ...valuesArray] = input.split("\n");
 
-const [basketLength, chanceCount] = targetArray.split(" ").map(Number);
+const [basketLength, _] = targetArray.split(" ").map(Number);
 
 const solution = () => {
-  const basketArray = Array.from({ length: basketLength }, () => 0);
+  const basketArray = Array.from({ length: basketLength }).fill(0);
 
-  for (let i = 0; i < chanceCount; i++) {
-    const [startIndex, endIndex, number] = valuesArray[i]
-      .split(" ")
-      .map(Number);
-
-    for (let j = startIndex; j <= endIndex; j++) {
-      basketArray[j - 1] = number;
+  valuesArray.forEach((value) => {
+    const [startIndex, endIndex, number] = value.split(" ").map(Number);
+    for (let i = startIndex; i <= endIndex; i++) {
+      basketArray[i - 1] = number;
     }
-  }
+  });
 
   console.log(basketArray.join(" "));
 };
