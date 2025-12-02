@@ -3,13 +3,10 @@ const input = fs.readFileSync(0).toString().trim();
 
 const [count, scoresArray] = input.split("\n");
 
-const scores = scoresArray
-  .split(" ")
-  .map(Number)
-  .sort((a, b) => a - b);
+const scores = scoresArray.split(" ").map(Number);
 
 const solution = () => {
-  const highestScore = scores[scores.length - 1];
+  const highestScore = Math.max(...scores);
   const modifiedArray = scores.map((score) => (score / highestScore) * 100);
 
   const average =
