@@ -11,14 +11,13 @@ const resultArray = Array.from({ length: basketLength }).map(
 
 const solution = () => {
   valueArray.forEach((value) => {
-    const [startIndex, endIndex] = value.split(" ").map(Number);
-    const start = startIndex - 1;
-    const end = endIndex - 1;
+    const [start, end] = value.split(" ").map(Number);
+    const startIndex = start - 1;
 
-    const reversedArray = resultArray.slice(start, end + 1).reverse();
+    const reversedArray = resultArray.slice(startIndex, end).reverse();
 
-    for (let i = start; i <= end; i++) {
-      resultArray[i] = reversedArray[i - start];
+    for (let i = startIndex; i < end; i++) {
+      resultArray[i] = reversedArray[i - startIndex];
     }
   });
 
