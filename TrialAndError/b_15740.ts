@@ -36,14 +36,12 @@ const pastSolution = () => {
  * NOTE - 2nd Trial (Success)
  * - 포인트
  * : BigInt 사용
- * : BigInt 사용 시, 뒤에 n이 추가됨
+ * : BigInt 뒤 n 제거 시, toString() 사용
  */
 
 const solution = () => {
   const [a, b] = input.split(" ").map(BigInt);
-
-  const sum = (a + b).toString().replace("n", "");
-  console.log(sum);
+  console.log((a + b).toString());
 };
 
 solution();
