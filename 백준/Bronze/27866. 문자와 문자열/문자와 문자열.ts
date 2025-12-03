@@ -1,0 +1,11 @@
+const fs = require("fs");
+const input = fs.readFileSync(0).toString().trim();
+
+const [text, target] = input.split("\n");
+
+const solution = () => {
+  const targetIndex = Number(target) - 1;
+  console.log(text[targetIndex]);
+};
+
+solution();
