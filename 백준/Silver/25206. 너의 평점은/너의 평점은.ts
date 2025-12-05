@@ -15,28 +15,20 @@ const gradeScore = {
 
 const array = input.split("\n");
 
-const nonPGradeList = array.filter((value) => {
-  const [, , grade] = value.split(" ");
-  return grade !== "P";
-});
+let totalTime = 0;
+let totalScore = 0;
 
 const solution = () => {
-  const scoreList = nonPGradeList.map((value) => {
+  array.forEach((value) => {
     const [, time, grade] = value.split(" ");
-    const parsedScore = gradeScore[grade as keyof typeof gradeScore];
 
-    return { time: Number(time), score: parsedScore };
+    if (grade !== "P") {
+      const parsedScore = gradeScore[grade as keyof typeof gradeScore];
+
+      totalTime += Number(time);
+      totalScore += Number(time) * parsedScore;
+    }
   });
-
-  const totalScore = scoreList.reduce((total, current) => {
-    const { time, score } = current;
-    return total + time * score;
-  }, 0);
-
-  const totalTime = scoreList.reduce((total, current) => {
-    const { time } = current;
-    return total + time;
-  }, 0);
 
   console.log(totalScore / totalTime);
 };
