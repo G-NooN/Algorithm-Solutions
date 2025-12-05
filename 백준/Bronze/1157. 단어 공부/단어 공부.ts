@@ -1,22 +1,18 @@
 const fs = require("fs");
 const input = fs.readFileSync(0).toString().trim();
 
-const alphabetArray = Array.from({ length: 26 }, (_, index) =>
-  String.fromCharCode(65 + index)
-);
 const alphabetCountArray = Array.from({ length: 26 }, () => 0);
-
 const upperCaseInputArray = input.toUpperCase().split("");
 
 const solution = () => {
   let result = "?";
 
-  alphabetArray.forEach((alphabet, index) => {
-    upperCaseInputArray.forEach((letter) => {
-      if (letter === alphabet) {
-        alphabetCountArray[index]++;
-      }
-    });
+  upperCaseInputArray.forEach((letter) => {
+    const index = letter.charCodeAt(0) - "A".charCodeAt(0);
+
+    if (index < 26) {
+      alphabetCountArray[index]++;
+    }
   });
 
   const maxCount = Math.max(...alphabetCountArray);
@@ -24,7 +20,7 @@ const solution = () => {
   if (alphabetCountArray.filter((count) => count === maxCount).length === 1) {
     const maxCountIndex = alphabetCountArray.indexOf(maxCount);
 
-    result = alphabetArray[maxCountIndex];
+    result = String.fromCharCode(maxCountIndex + "A".charCodeAt(0));
   }
 
   console.log(result);
