@@ -22,11 +22,9 @@ const solution = () => {
   const maxCount = Math.max(...alphabetCountArray);
 
   if (alphabetCountArray.filter((count) => count === maxCount).length === 1) {
-    const maxCountValueIndex = alphabetCountArray.findIndex(
-      (count) => count === maxCount
-    );
+    const maxCountIndex = alphabetCountArray.indexOf(maxCount);
 
-    result = alphabetArray[maxCountValueIndex];
+    result = alphabetArray[maxCountIndex];
   }
 
   console.log(result);
