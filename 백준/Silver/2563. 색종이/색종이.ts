@@ -7,7 +7,7 @@ const paperSize = 10;
 const [, ...points] = input.split("\n");
 
 const background = Array.from({ length: backgroundSize }, () =>
-  Array.from({ length: backgroundSize }, () => 0)
+  Array.from({ length: backgroundSize }, () => false)
 );
 
 const solution = () => {
@@ -16,7 +16,7 @@ const solution = () => {
 
     for (let i = x; i < x + paperSize; i++) {
       for (let j = y; j < y + paperSize; j++) {
-        background[i][j]++;
+        background[i][j] = true;
       }
     }
   });
@@ -25,7 +25,7 @@ const solution = () => {
 
   for (let i = 0; i < backgroundSize; i++) {
     for (let j = 0; j < backgroundSize; j++) {
-      if (background[i][j] > 0) {
+      if (background[i][j]) {
         areaSize++;
       }
     }
