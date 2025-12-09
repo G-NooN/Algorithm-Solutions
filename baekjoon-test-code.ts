@@ -1,20 +1,19 @@
-// NOTE - 백준 제출용 (JavaScript)
-// readFileSync(0 또는 '/dev/stdin' 사용)
-// const fs = require("fs");
-// const input = fs.readFileSync(0).toString().trim();
-
-// NOTE - 내부 테스트용 (TypeScript)
-import fs from "fs";
-const input = fs.readFileSync("./baekjoon-test-input.txt").toString().trim();
-
 /**
- * NOTE - input 참고사항
- * - input 값에 toString().trim() 기본 적용 (미적용 시 Buffer 객체 반환)
- * - 이후 입력되는 형태에 따라 split, map 등 메서드 활용 필요
+ * NOTE - 채점 환경
+ * - 백준 : linux (ubuntu)
+ * - 맥북 : darwin
+ *
+ * => linux 인 경우 0 (= stdin) 사용 (공식: /dev/stdin)
+ * => darwin 인 경우 ./input.txt 사용
+ *
+ * NOTE - input 처리
+ * - 기본값 : Buffer 객체
+ * - 처리 1 : toString() (Buffer -> String)
+ * - 처리 2 : trim() (앞뒤 공백 제거)
  */
 
-/** ----------코드 작성 지점---------- **/
+import { readFileSync } from "fs";
+import { platform } from "process";
 
-const solution = () => {};
-
-solution();
+const inputPath = platform === "linux" ? 0 : "./input.txt";
+const input = readFileSync(inputPath).toString().trim();
