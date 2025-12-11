@@ -1,22 +1,18 @@
 import { readFileSync } from "fs";
-import { platform } from "process";
 
-const inputPath = platform === "linux" ? 0 : "./input.txt";
-const input = readFileSync(inputPath).toString().trim();
+const input = readFileSync(0).toString().trim();
 
 const max = Number(input);
+const starArray: string[] = [];
 
-function writeLine(i: number) {
-  const star = "*".repeat(i);
-  const space = " ".repeat(2 * (max - i));
+for (let i = 0; i < max; i++) {
+  const star = "*".repeat(i + 1);
+  const tab = " ".repeat(2 * (max - (i + 1)));
 
-  console.log(star + space + star);
+  starArray.push(star + tab + star);
 }
 
-for (let i = 1; i < max; i++) {
-  writeLine(i);
-}
+const reversedArray = [...starArray].reverse().slice(1);
+const result = [...starArray, ...reversedArray];
 
-for (let i = max; i > 0; i--) {
-  writeLine(i);
-}
+console.log(result.join("\n"));
