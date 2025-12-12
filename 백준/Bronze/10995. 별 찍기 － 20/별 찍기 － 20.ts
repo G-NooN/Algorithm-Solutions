@@ -7,10 +7,15 @@ const count = Number(input);
 const starText = "* ".repeat(count);
 const reversedStarText = " *".repeat(count);
 
+const result: string[] = [];
+
 for (let i = 1; i <= count; i++) {
   if (i % 2 === 0) {
-    console.log(reversedStarText);
+    result.push(reversedStarText);
   } else {
-    console.log(starText);
+    result.push(starText);
   }
 }
+
+console.log(result.join("\n"));
+
