@@ -1,8 +1,4 @@
 const dateObj = new Date();
-const [year, month, date] = [
-  dateObj.getUTCFullYear(),
-  dateObj.getUTCMonth() + 1,
-  dateObj.getUTCDate(),
-];
+const [date] = dateObj.toISOString().split("T");
 
-console.log(`${year}-${month}-${date}`);
+console.log(date);
