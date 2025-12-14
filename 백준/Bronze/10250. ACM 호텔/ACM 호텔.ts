@@ -10,7 +10,7 @@ values.forEach((value) => {
   const [height, , order] = value.split(" ").map(Number);
 
   let floor = order % height === 0 ? height : order % height;
-  let room = Math.ceil(order / height)
+  const room = Math.ceil(order / height)
     .toString()
     .padStart(2, "0");
 
