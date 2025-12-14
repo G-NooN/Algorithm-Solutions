@@ -7,7 +7,7 @@
 
 // NOTE - 공통 상위 코드
 import fs from "fs";
-const input = fs.readFileSync("./baekjoon-test-input.txt").toString().trim();
+const input = fs.readFileSync("./input.txt").toString().trim();
 
 const value = Number(input);
 
