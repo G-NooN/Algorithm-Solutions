@@ -1,10 +1,10 @@
 import { readFileSync } from "fs";
-import { platform } from "process";
 
-const inputPath = platform === "linux" ? 0 : "./input.txt";
-const input = readFileSync(inputPath).toString().trim();
+const input = readFileSync(0).toString().trim();
 
 const [a, b] = input.split(" ").map(BigInt);
+
+const result: string[] = [];
 
 let [q, r] = [a / b, a % b];
 
@@ -13,5 +13,7 @@ if (a < 0 && r < 0) {
   r = a - q * b;
 }
 
-console.log(q.toString());
-console.log(r.toString());
+result.push(q.toString());
+result.push(r.toString());
+
+console.log(result.join("\n"));
