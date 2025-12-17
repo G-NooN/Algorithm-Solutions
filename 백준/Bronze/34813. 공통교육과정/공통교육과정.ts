@@ -2,17 +2,11 @@ import { readFileSync } from "fs";
 
 const input = readFileSync(0).toString().trim();
 
-switch (input[0]) {
-  case "F":
-    console.log("Foundation");
-    break;
-  case "C":
-    console.log("Claves");
-    break;
-  case "V":
-    console.log("Veritas");
-    break;
-  case "E":
-    console.log("Exploration");
-    break;
-}
+const classType = {
+  F: "Foundation",
+  C: "Claves",
+  V: "Veritas",
+  E: "Exploration",
+};
+
+console.log(classType[input[0] as keyof typeof classType]);
