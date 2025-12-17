@@ -6,8 +6,8 @@
  */
 
 // NOTE - 공통 상위 코드
-import fs from "fs";
-const input = fs.readFileSync("./input.txt").toString().trim();
+import { readFileSync } from "fs";
+const input = readFileSync("./input.txt").toString().trim();
 
 const array = input.split("\n");
 

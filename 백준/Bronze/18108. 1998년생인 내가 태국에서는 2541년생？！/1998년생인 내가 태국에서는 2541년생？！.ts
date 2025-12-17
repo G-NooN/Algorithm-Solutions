@@ -1,5 +1,5 @@
-const fs = require("fs");
-const input = fs.readFileSync("/dev/stdin").toString().trim();
+import { readFileSync } from "fs";
+const input = readFileSync(0).toString().trim();
 
 const buddhistYearCount = 543;
 

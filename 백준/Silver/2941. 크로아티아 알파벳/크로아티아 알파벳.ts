@@ -1,5 +1,5 @@
-const fs = require("fs");
-const input = fs.readFileSync(0).toString().trim();
+import { readFileSync } from "fs";
+const input = readFileSync(0).toString().trim();
 
 const croatianAlphabets = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="];
 
