@@ -1,8 +1,6 @@
 import { readFileSync } from "fs";
-import { platform } from "process";
 
-const inputPath = platform === "linux" ? 0 : "./input.txt";
-const input = readFileSync(inputPath).toString().trim();
+const input = readFileSync(0).toString().trim();
 
 const [a, b] = input.split(" ").map(BigInt);
 
