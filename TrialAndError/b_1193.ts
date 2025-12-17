@@ -5,57 +5,74 @@
  * - 링크 : https://www.acmicpc.net/problem/1193
  */
 
+/**
+ *
+ * SECTION - 규칙
+ *
+ * 전체 배열을 / 형태의 대각선으로 분리 & 접근 방향대로 배치시켰을 때
+ *
+ * - 1번째 배열 - [1/1]
+ * - 2번째 배열 - [1/2, 2/1]
+ * - 3번째 배열 - [3/1, 2/2, 1/3]
+ * - 4번째 배열 - [4/1, 3/2, 2/3, 1/4]
+ * - 5번째 배열 - [5/1, 4/2, 3/3, 2/4, 1/5]
+ * - ...
+ *
+ * NOTE - 규칙 1
+ * : N 번째 배열의 요소(=분수) 개수 = N개
+ *
+ * NOTE - 규칙 2
+ * : N 번째 배열의 i 번쨰 분수 (1 <= i <= N)
+ *
+ * 1) N 이 짝수인 경우
+ * : 분자 = N - i + 1
+ * : 분모 = i
+ *
+ * 2) N 이 홀수인 경우
+ * : 분자 = i
+ * : 분모 = N - i + 1
+ *
+ * NOTE - 포인트
+ * => 입력값이 N 번째 배열의 i 번째 분수인지 찾으면 됨
+ *
+ * !SECTION
+ */
+
 // NOTE - 공통 상위 코드
 import { readFileSync } from "fs";
 const input = readFileSync("./input.txt").toString().trim();
 
-let num = Number(input);
+let value = Number(input);
 
-// crossCount: 대각선 횟수, top: 분자, bottom: 분모
-let [crossCount, top, bottom] = [1, 1, 1];
-
-/**
- * NOTE - 규칙
- * 전체 배열을 대각선으로 잘랐을 때
- * (대각선 횟수 - 순서)
- * 1 - 1/1
- * 2 - 1/2 2/1
- * 3 - 3/1 2/2 1/3
- * 4 - 4/1 3/2 2/3 1/4
- * 5 - 5/1 4/2 3/3 2/4 1/5
- * ...
- *
- * 각 그룹별 분수의 개수 = 대각선 횟수
- *
- * 각 그룹의 i번째 분수 (i = 1, 2, 3, ..., 대각선 횟수)
- * - 대각선 횟수가 짝수인 경우
- * : 분자 = 대각선 횟수 - i + 1
- * : 분모 = i
- *
- * - 대각선 횟수가 홀수인 경우
- * : 분자 = i
- * : 분모 = 대각선 횟수 - i + 1
- */
+// arrayNum: 배열 번호, top: 분자, bottom: 분모
+let [arrayNum, top, bottom] = [1, 1, 1];
 
 /**
  * NOTE - 1st Trial (Success)
  * - 포인트
- * : num 에서 대각선 횟수만큼 계속해서 --
- * : 계속해서 빠진 num < 대각선 횟수가 되면 num === 순서
- * => num 순서 i로 활용
+ * : targetValue가 입력값보다 커지기 직전까지
+ *   - targetValue += arrayNum
+ *   - arrayNum++
+ * : i 번째 위치 = value - targetValue
  */
 
 const pastSolution = () => {
-  // 순서 i 도출 (num < 대각선 횟수가 될 때까지 --)
-  while (num > crossCount) {
-    num -= crossCount;
-    crossCount++;
+  let targetValue = 0;
+
+  // targetValue가 입력값보다 커지기 직전까지 targetValue, arrayNum ++
+  while (value > targetValue + arrayNum) {
+    targetValue += arrayNum;
+    arrayNum++;
   }
 
-  const crossCountEven = crossCount % 2 === 0;
+  // 순서 i 도출
+  const position = value - targetValue;
 
-  top = crossCountEven ? num : crossCount - num + 1;
-  bottom = crossCountEven ? crossCount - num + 1 : num;
+  // arrayNum 짝수 여부
+  const arrayNumEven = arrayNum % 2 === 0;
+
+  top = arrayNumEven ? position : arrayNum - position + 1;
+  bottom = arrayNumEven ? arrayNum - position + 1 : position;
 
   console.log(`${top}/${bottom}`);
 };
@@ -63,26 +80,26 @@ const pastSolution = () => {
 /**
  * NOTE - 2nd Trial (Success)
  * - 포인트
- * : 순서 i를 직접 선언하여 활용
+ * : value 를 position 으로 활용
+ * : arrayNum 이 value 보다 커지기 직전까지
+ *   - value -= arrayNum
+ *   - arrayNum++
+ * : position = value
  */
 
 const solution = () => {
-  // 현재까지 누적된 num
-  let targetNumber = 0;
-
-  // 대각선 횟수 + 현재까지 누적된 num >= num 이 되기 직전까지 반복
-  while (num > crossCount + targetNumber) {
-    targetNumber += crossCount;
-    crossCount++;
+  // arrayNum이 value 보다 커지기 직전까지 반복
+  while (value > arrayNum) {
+    value -= arrayNum;
+    arrayNum++;
   }
 
-  // 순서 i 도출
-  const position = num - targetNumber;
+  // arrayNum 짝수 여부
+  const arrayNumEven = arrayNum % 2 === 0;
 
-  const crossCountEven = crossCount % 2 === 0;
-
-  top = crossCountEven ? position : crossCount - position + 1;
-  bottom = crossCountEven ? crossCount - position + 1 : position;
+  // position = value
+  top = arrayNumEven ? value : arrayNum - value + 1;
+  bottom = arrayNumEven ? arrayNum - value + 1 : value;
 
   console.log(`${top}/${bottom}`);
 };
