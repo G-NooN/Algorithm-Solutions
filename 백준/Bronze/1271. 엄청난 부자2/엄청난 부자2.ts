@@ -6,10 +6,7 @@ const result: string[] = [];
 
 const [a, b] = input.split(" ").map(BigInt);
 
-const share = a / b;
-const mod = a - share * b;
-
-result.push(share.toString());
-result.push(mod.toString());
+result.push((a / b).toString());
+result.push((a % b).toString());
 
 console.log(result.join("\n"));
