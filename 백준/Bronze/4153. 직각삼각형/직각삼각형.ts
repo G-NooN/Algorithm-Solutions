@@ -2,7 +2,7 @@ import { readFileSync } from "fs";
 
 const input = readFileSync(0).toString().trim();
 
-const array = input.split("\n");
+const array = input.split("\n").slice(0, -1);
 
 const result: string[] = [];
 
@@ -17,4 +17,4 @@ array.forEach((value) => {
     : result.push("wrong");
 });
 
-console.log(result.slice(0, -1).join("\n"));
+console.log(result.join("\n"));
