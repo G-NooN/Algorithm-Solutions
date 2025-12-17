@@ -6,8 +6,8 @@
  */
 
 // NOTE - 공통 상위 코드
-import fs from "fs";
-const input = fs.readFileSync("./input.txt").toString().trim();
+import { readFileSync } from "fs";
+const input = readFileSync("./input.txt").toString().trim();
 
 const [up, down, target] = input.split(" ").map(Number);
 
@@ -43,21 +43,23 @@ const failedSolution = () => {
  * - 포인트
  * : 규칙 정의
  *
- * SECTION - 규칙 (a: up, b: down, T: target, x: dayCount)
- * (a - b) + (a - b) + ... + a >= T
- * => ax - b(x - 1) >= T
- * => ax - bx + b >= T
- * => ax - bx >= T - b
- * => x(a - b) >= T - b
- * => x >= (T - b) / (a - b)
+ * SECTION - 규칙 (u: up, d: down, T: target, C: dayCount)
+ * (u - d) + (u - d) + ... + u >= T
+ * => uC - d(C - 1) >= T
+ * => uC - dC + d >= T
+ * => uC - dC >= T - d
+ * => C(u - d) >= T - d
+ * => C >= (T - d) / (u - d)
  * !SECTION
  *
- * : 만일 x 가 정수이면, 그 날 바로 도착
- * : 만일 x 가 정수가 아니면, 다음날 바로 도착 => Math.ceil(x)
+ * : 만일 C 가 정수면, 그 날 바로 도착
+ * : 만일 C 가 정수가 아니면, 다음날 바로 도착 => 다음 날 도착
+ *
+ * => Math.ceil(C)
  */
 
 const solution = () => {
-  const dayCount = Math.ceil((target - down) / (up - down));
+  const dayCount = (target - down) / (up - down);
 
   console.log(Math.ceil(dayCount));
 };
