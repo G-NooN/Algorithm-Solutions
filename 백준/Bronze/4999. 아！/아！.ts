@@ -2,6 +2,6 @@ import { readFileSync } from "fs";
 
 const input = readFileSync(0).toString().trim();
 
-const [supply, demand] = input.split("\n").map((value) => value.length);
+const [supply, demand] = input.split("\n");
 
-console.log(supply >= demand ? "go" : "no");
+console.log(supply.includes(demand) ? "go" : "no");
