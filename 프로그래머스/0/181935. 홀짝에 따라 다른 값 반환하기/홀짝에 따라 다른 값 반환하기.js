@@ -4,7 +4,7 @@ function solution(n) {
   if (n % 2 === 0) {
     result = (n * (n + 1) * (n + 2)) / 6;
   } else {
-    result = ((n + 1) * ((n + 1) / 2)) / 2;
+    result = Math.pow((n+1)/2, 2)
   }
 
   return result;
