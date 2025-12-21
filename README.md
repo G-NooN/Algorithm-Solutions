@@ -36,3 +36,32 @@
 1. 테스트 방법
    1. Code Runner (실행 : `Ctrl + Alt + N` / 종료 : `Ctrl + Alt + M`)
    2. Terminal (실행 : `node 파일명`)
+2. 특이사항
+
+   1. 프로그래머스
+
+      - 실제 채점 환경
+
+        - input : 타입과 함께 사전 정의됨
+        - output : 단순 return
+
+          ```javascript
+          function solution(input) {
+            return output;
+          }
+          ```
+
+      - IDE 환경
+
+        - input : 별도로 정의 필요
+        - output : console 로 return
+
+          ```javascript
+          const input = "";
+
+          const solution = () => {
+            console.log(output);
+          };
+
+          solution();
+          ```
