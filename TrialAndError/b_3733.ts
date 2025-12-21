@@ -41,7 +41,7 @@ const pastSolution = () => {
 
 const solution = () => {
   const array = input.split("\n").map((value) => {
-    const [a, b] = value.split(" ").map((value) => Number(value));
+    const [a, b] = value.split(" ").map(Number);
 
     return Math.floor(b / (a + 1));
   });
