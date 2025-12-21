@@ -56,9 +56,9 @@ const pastSolution = () => {
  */
 
 const solution = () => {
-  const set = new Set(array);
+  const arraySet = new Set(array);
 
-  for (let i = 0; i < array.length - set.size + 1; i++) {
+  for (let i = 0; i <= array.length - arraySet.size; i++) {
     result *= array.reduce((acc, value) => acc + Math.pow(value, i + 1), 0);
   }
 
