@@ -2,6 +2,14 @@ import { readFileSync } from "fs";
 
 const input = readFileSync(0).toString().trim();
 
-const result = BigInt(input) % BigInt(20000303);
+const divider = 20000303;
 
-console.log(result.toString());
+let mod = 0;
+
+for (let i = 0; i < input.length; i++) {
+  let digit = Number(input[i]);
+
+  mod = (10 * mod + digit) % divider;
+}
+
+console.log(mod);
