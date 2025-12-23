@@ -1,10 +1,16 @@
 function solution(l, r) {
   const result = [];
 
-  for (let i = l; i <= r; i++) {
-    if (i.toString().replaceAll(/[05]/g, "").length === 0) {
-      result.push(i);
-    }
+  let binaryNum = 1;
+
+  while (true) {
+    const binaryNumText = binaryNum.toString(2);
+    const value = parseInt(binaryNumText, 10) * 5;
+
+    if (value > r) break;
+    if (value >= l) result.push(value);
+
+    binaryNum++;
   }
 
   return result.length ? result : [-1];
