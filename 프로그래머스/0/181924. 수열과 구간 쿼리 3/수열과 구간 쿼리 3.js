@@ -1,14 +1,7 @@
 function solution(arr, queries) {
-  let temp = 0;
-  const result = [...arr];
-
-  queries.forEach((query) => {
-    const [i, j] = query;
-
-    temp = result[i];
-    result[i] = result[j];
-    result[j] = temp;
+  queries.forEach(([i, j]) => {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   });
 
-  return result;
+  return arr;
 }
