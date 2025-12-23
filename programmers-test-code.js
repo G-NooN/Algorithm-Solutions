@@ -4,3 +4,5 @@
 // const input = readFileSync("./input.txt").toString().trim();
 
 function solution() {}
+
+solution();
