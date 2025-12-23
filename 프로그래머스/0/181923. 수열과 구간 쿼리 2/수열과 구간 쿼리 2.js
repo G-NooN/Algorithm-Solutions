@@ -1,10 +1,9 @@
 function solution(arr, queries) {
   const result = queries.map(
-    ([s, e, k]) =>
-      arr
-        .slice(s, e + 1)
-        .sort((a, b) => a - b)
-        .find((value) => value > k) ?? -1
+    ([s, e, k]) => {
+      const values = arr.slice(s, e + 1).filter((value) => value > k);
+      return values.length ? Math.min(...values) : -1;
+    }
   );
 
   return result;
