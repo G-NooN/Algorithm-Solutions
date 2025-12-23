@@ -2,13 +2,12 @@ import { readFileSync } from "fs";
 
 const input = readFileSync(0).toString().trim();
 
-let [year, month] = [2024, 8];
+let [year, month] = [2024, 1];
 
-let targetMonth = month + 7 * (Number(input) - 1);
+const target = month + 7 * Number(input);
+const yearEnd = target % 12 === 0;
 
-while (targetMonth > 12) {
-  targetMonth -= 12;
-  year++;
-}
+year += yearEnd ? Math.floor(target / 12) - 1 : Math.floor(target / 12);
+month = yearEnd ? 12 : target % 12;
 
-console.log(year, targetMonth);
+console.log(year, month);
