@@ -14,10 +14,8 @@ function solution(arr) {
       result.push(arr[i]);
       i++;
     } else {
-      result = result.slice(0, -1);
+      result.pop();
     }
-
-    lastValue = [...result].pop();
   }
 
   return result;
