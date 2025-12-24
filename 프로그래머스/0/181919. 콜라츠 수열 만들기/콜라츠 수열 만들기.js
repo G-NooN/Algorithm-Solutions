@@ -1,12 +1,10 @@
 function solution(n) {
   const result = [n];
 
-  let lastValue = [...result].pop();
+  while (n !== 1) {
+    n = n % 2 === 0 ? n / 2 : n * 3 + 1;
 
-  while (lastValue !== 1) {
-    result.push(lastValue % 2 === 0 ? lastValue / 2 : lastValue * 3 + 1);
-
-    lastValue = [...result].pop();
+    result.push(n);
   }
 
   return result;
