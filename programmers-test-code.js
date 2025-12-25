@@ -5,4 +5,4 @@
 
 function solution() {}
 
-solution();
+console.log(solution());
