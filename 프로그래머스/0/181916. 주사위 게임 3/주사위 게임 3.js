@@ -1,42 +1,28 @@
 function solution(a, b, c, d) {
   const array = [a, b, c, d];
-  const arraySet = new Set(array);
+  const arrayMap = new Map();
 
-  if (arraySet.size === 1) {
-    return 1111 * a;
-  }
+  array.forEach((value) => {
+    arrayMap.set(value, (arrayMap.get(value) || 0) + 1);
+  });
 
-  if (arraySet.size === 2) {
-    const targetValue = array.find(
-      (value) => array.filter((v) => v === value).length === 3
-    );
+  const sortedArray = [...arrayMap.keys()].sort(
+    (a, b) => arrayMap.get(b) - arrayMap.get(a)
+  );
+  const maxCount = Math.max(...[...arrayMap.values()]);
 
-    if (targetValue) {
-      const otherValue = array.find((value) => value !== targetValue);
-      const result = Math.pow(10 * targetValue + otherValue, 2);
+  const [p, q, r] = sortedArray;
 
-      return result;
-    } else {
-      const [a, b] = [...arraySet];
-      const result = (a + b) * Math.abs(a - b);
-
-      return result;
-    }
-  }
-
-  if (arraySet.size === 3) {
-    const targetValue = array.find(
-      (value) => array.filter((v) => v === value).length === 2
-    );
-
-    const result = array
-      .filter((value) => value !== targetValue)
-      .reduce((acc, value) => acc * value, 1);
-
-    return result;
-  }
-
-  if (arraySet.size === 4) {
-    return Math.min(...arraySet);
+  switch (sortedArray.length) {
+    case 1:
+      return 1111 * p;
+    case 2:
+      return maxCount === 3
+        ? Math.pow(10 * p + q, 2)
+        : (p + q) * Math.abs(p - q);
+    case 3:
+      return q * r;
+    case 4:
+      return Math.min(...array);
   }
 }
