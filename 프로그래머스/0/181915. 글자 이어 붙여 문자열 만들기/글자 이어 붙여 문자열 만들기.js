@@ -1,9 +1,3 @@
 function solution(my_string, index_list) {
-  const result = [];
-
-  index_list.forEach((index) => {
-    result.push(my_string[index]);
-  });
-
-  return result.join("");
+  return index_list.map((index) => my_string[index]).join("");
 }
