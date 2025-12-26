@@ -6,12 +6,4 @@ const [, bus, subway] = input.split(" ").map(Number);
 
 let result = "Anything";
 
-if (bus < subway) {
-  result = "Bus";
-}
-
-if (subway < bus) {
-  result = "Subway";
-}
-
-console.log(result);
+console.log(bus === subway ? "Anything" : bus < subway ? "Bus" : "Subway");
