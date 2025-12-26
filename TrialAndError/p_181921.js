@@ -54,7 +54,7 @@ const pastSolution2 = () => {
  * [0, 1, 10, 11, ...] = [0, 5, 50, 55, ...]
  * !SECTION
  *
- * : 1부터 2진수 숫자 => 10진수 숫자 * 5 변환
+ * : 1부터 10진수 숫자 => 2진수 숫자 형태 * 5 변환
  * : l <= value <= r 인 항목만 result.push()
  *
  * - 효과
@@ -62,16 +62,15 @@ const pastSolution2 = () => {
  */
 
 const solution = () => {
-  let binaryNum = 1;
+  let num = 1;
 
   while (true) {
-    const binaryNumText = binaryNum.toString(2);
-    const value = parseInt(binaryNumText, 10) * 5;
+    const value = num.toString(2) * 5;
 
     if (value > r) break;
     if (value >= l) result.push(value);
 
-    binaryNum++;
+    num++;
   }
 
   return result.length ? result : [-1];
