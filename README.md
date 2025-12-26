@@ -59,9 +59,9 @@
           ```javascript
           const input = "";
 
-          const solution = () => {
-            console.log(output);
-          };
+          function solution() {
+            return output;
+          }
 
-          solution();
+          console.log(solution());
           ```
