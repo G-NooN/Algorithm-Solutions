@@ -33,7 +33,7 @@ const pastSolution = () => {
     result = sum * doubleSum;
   }
 
-  console.log(result);
+  return result;
 };
 
 /**
@@ -62,7 +62,7 @@ const solution = () => {
     result *= array.reduce((acc, value) => acc + Math.pow(value, i + 1), 0);
   }
 
-  console.log(result);
+  return result;
 };
 
-solution();
+console.log(solution());

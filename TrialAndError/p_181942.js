@@ -22,7 +22,7 @@ const pastSolution = () => {
     result.push(str2[i]);
   }
 
-  console.log(result.join(""));
+  return result.join("");
 };
 
 /**
@@ -34,7 +34,7 @@ const pastSolution = () => {
 const solution = () => {
   const result = [...str1].map((letter, index) => letter + str2[index]);
 
-  console.log(result.join(""));
+  return result.join("");
 };
 
-solution();
+console.log(solution());

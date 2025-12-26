@@ -27,7 +27,7 @@ const pastSolution = () => {
 
   const result = a * includedIndexArray.length + d * indexSum;
 
-  console.log(result);
+  return result;
 };
 
 /**
@@ -41,7 +41,7 @@ const solution = () => {
     0
   );
 
-  console.log(result);
+  return result;
 };
 
-solution();
+console.log(solution());

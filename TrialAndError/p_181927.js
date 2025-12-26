@@ -18,7 +18,7 @@ const pastSolution = () => {
 
   num_list.push(a < b ? b - a : 2 * b);
 
-  console.log(num_list);
+  return num_list;
 };
 
 /**
@@ -33,7 +33,7 @@ const solution = () => {
 
   const result = [...num_list, a < b ? b - a : 2 * b];
 
-  console.log(result);
+  return result;
 };
 
-solution();
+console.log(solution());

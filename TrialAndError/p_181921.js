@@ -24,7 +24,7 @@ const pastSolution1 = () => {
     }
   }
 
-  console.log(result.length ? result : [-1]);
+  return result.length ? result : [-1];
 };
 
 /**
@@ -41,7 +41,7 @@ const pastSolution2 = () => {
     }
   }
 
-  console.log(result.length ? result : [-1]);
+  return result.length ? result : [-1];
 };
 
 /**
@@ -74,7 +74,7 @@ const solution = () => {
     binaryNum++;
   }
 
-  console.log(result.length ? result : [-1]);
+  return result.length ? result : [-1];
 };
 
-solution();
+console.log(solution());

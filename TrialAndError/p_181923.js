@@ -30,7 +30,7 @@ const pastSolution = () => {
         .find((value) => value > k) ?? -1
   );
 
-  console.log(result);
+  return result;
 };
 
 /**
@@ -46,7 +46,7 @@ const solution = () => {
     return values.length ? Math.min(...values) : -1;
   });
 
-  console.log(result);
+  return result;
 };
 
-solution();
+console.log(solution());

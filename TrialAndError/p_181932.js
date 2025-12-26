@@ -19,7 +19,7 @@ const code = "abc1abc1abc";
 const failedSolution = () => {
   const array = code.split("");
 
-  if (!array.length) console.log("EMPTY");
+  if (!array.length) return "EMPTY";
 
   const result = [];
   let mode = false;
@@ -34,7 +34,7 @@ const failedSolution = () => {
     }
   });
 
-  console.log(result.join(""));
+  return result.join("");
 };
 
 /**
@@ -57,7 +57,7 @@ const pastSolution = () => {
     }
   });
 
-  console.log(result.length ? result.join("") : "EMPTY");
+  return result.length ? result.join("") : "EMPTY";
 };
 
 /**
@@ -75,7 +75,7 @@ const solution = () => {
 
   const result = array.filter((_, index) => index % 2 === 0).join("");
 
-  console.log(result.length ? result : "EMPTY");
+  return result.length ? result : "EMPTY";
 };
 
-solution();
+console.log(solution());
