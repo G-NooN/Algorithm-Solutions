@@ -58,7 +58,7 @@ const pastSolution2 = () => {
  * : l <= value <= r 인 항목만 result.push()
  *
  * - 효과
- * : 메모리 & 시간 감소 (메모리 : 53.8 MB -> 33.4 MB, 시간 : 210.98 ms -> 0.15 ms)
+ * : 메모리 & 시간 감소 (메모리 : 53.8 MB -> 33.4 MB / 시간 : 210.98 ms -> 0.15 ms)
  */
 
 const solution = () => {

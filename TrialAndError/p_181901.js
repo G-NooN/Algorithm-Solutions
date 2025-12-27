@@ -37,3 +37,5 @@ const solution = () => {
 
   return result;
 };
+
+console.log(solution());
