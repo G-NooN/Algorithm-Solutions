@@ -1,5 +1,9 @@
 function solution(n, k) {
-  return Array.from({ length: n }, (_, index) => index + 1).filter(
-    (value) => value % k === 0
-  );
+  const result = [];
+
+  for (let i = k; i <= n; i += k) {
+    result.push(i);
+  }
+
+  return result;
 }
