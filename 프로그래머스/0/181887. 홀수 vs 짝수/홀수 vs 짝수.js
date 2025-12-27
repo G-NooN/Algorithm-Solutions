@@ -1,10 +1,9 @@
 function solution(num_list) {
-  const oddIndexSum = num_list
-    .filter((_, index) => index % 2 === 0)
-    .reduce((acc, value) => acc + value, 0);
-  const evenIndexSum = num_list
-    .filter((_, index) => index % 2 !== 0)
-    .reduce((acc, value) => acc + value, 0);
+  let [oddIndexSum, evenIndexSum] = [0, 0];
 
-  return oddIndexSum > evenIndexSum ? oddIndexSum : evenIndexSum;
+  num_list.forEach((value, index) => {
+    index % 2 === 0 ? (evenIndexSum += value) : (oddIndexSum += value);
+  });
+
+  return Math.max(oddIndexSum, evenIndexSum);
 }
