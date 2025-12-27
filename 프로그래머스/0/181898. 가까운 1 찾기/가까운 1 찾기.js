@@ -1,3 +1,3 @@
 function solution(arr, idx) {
-  return arr.findIndex((value, index) => index >= idx && Boolean(value));
+  return arr.indexOf(1, idx);
 }
