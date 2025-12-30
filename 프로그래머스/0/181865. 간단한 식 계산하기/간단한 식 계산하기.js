@@ -1,12 +1,11 @@
 function solution(binomial) {
+  const ops = {
+    "+": (a, b) => a + b,
+    "-": (a, b) => a - b,
+    "*": (a, b) => a * b,
+  };
+
   const [a, op, b] = binomial.split(" ");
 
-  switch (op) {
-    case "+":
-      return Number(a) + Number(b);
-    case "-":
-      return Number(a) - Number(b);
-    case "*":
-      return Number(a) * Number(b);
-  }
+  return ops[op](Number(a), Number(b));
 }
