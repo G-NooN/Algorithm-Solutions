@@ -39,23 +39,28 @@ const failedSolution = () => {
 };
 
 /**
- * NOTE - 2nd Trial (Success)
- * - 포인트
- * : 규칙 정의
+ * SECTION - 규칙
  *
- * SECTION - 규칙 (u: up, d: down, T: target, C: dayCount)
+ * u: up, d: down, T: target, C: dayCount
+ *
  * (u - d) + (u - d) + ... + u >= T
  * => uC - d(C - 1) >= T
  * => uC - dC + d >= T
  * => uC - dC >= T - d
  * => C(u - d) >= T - d
  * => C >= (T - d) / (u - d)
- * !SECTION
  *
- * : 만일 C 가 정수면, 그 날 바로 도착
- * : 만일 C 가 정수가 아니면, 다음날 바로 도착 => 다음 날 도착
+ * NOTE - 포인트
+ * => C 가 정수면, 그 날 바로 도착
+ * => C 가 정수가 아니면, 다음날 바로 도착 => 다음 날 도착
  *
  * => Math.ceil(C)
+ *
+ * !SECTION
+ */
+
+/**
+ * NOTE - 2nd Trial (Success)
  */
 
 const solution = () => {

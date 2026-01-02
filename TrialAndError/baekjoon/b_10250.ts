@@ -14,12 +14,16 @@ const [, ...values] = input.split("\n");
 const result: string[] = [];
 
 /**
- * NOTE - 규칙
- * - 배정 순서
+ * SECTION - 규칙
+ *
+ * 배정 순서
  * : 101 -> 201 -> ... 최고층 1호
  * : 102 -> 202 -> ... 최고층 2호
+ *
  * => 배정 층 : 배정순서 % 층수
  * => 배정 호수 : Math.ceil(배정순서 / 층수)
+ *
+ * !SECTION
  */
 
 /**
