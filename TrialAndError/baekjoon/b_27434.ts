@@ -8,6 +8,7 @@
 // NOTE - 공통 상위 코드
 import { readFileSync } from "fs";
 const input = readFileSync("./input.txt").toString().trim();
+const num = Number(input);
 
 /**
  * NOTE - 1st Trial (Fail)
@@ -18,7 +19,7 @@ const input = readFileSync("./input.txt").toString().trim();
 const failedSolution1 = () => {
   let result = BigInt(1);
 
-  for (let i = 1; i <= Number(input); i++) {
+  for (let i = 1; i <= num; i++) {
     result *= BigInt(i);
   }
 
@@ -50,8 +51,6 @@ const failedSolution2 = () => {
  */
 
 const solution = () => {
-  const num = Number(input);
-
   const factorial = (left: number, right: number): bigint => {
     if (left === right) return BigInt(left);
 
