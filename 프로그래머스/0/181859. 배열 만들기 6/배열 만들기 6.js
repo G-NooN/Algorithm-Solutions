@@ -2,11 +2,7 @@ function solution(arr) {
   let result = [];
 
   arr.forEach((value) => {
-    if (!result.length) {
-      result.push(value);
-    } else {
-      [...result].pop() === value ? result.pop() : result.push(value);
-    }
+    value !== result[result.length - 1] ? result.push(value) : result.pop();
   });
 
   return result.length ? result : [-1];
