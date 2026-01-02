@@ -1,13 +1,9 @@
 function solution(arr, flag) {
-  let result = [];
-
-  arr.forEach((value, index) => {
-    if (flag[index]) {
-      result = [...result, ...Array.from({ length: value * 2 }, () => value)];
-    } else {
-      result = result.slice(0, -value);
-    }
-  });
-
-  return result
+  return arr.reduce(
+    (acc, value, index) =>
+      flag[index]
+        ? [...acc, ...Array.from({ length: value * 2 }, () => value)]
+        : acc.slice(0, -value),
+    []
+  );
 }
