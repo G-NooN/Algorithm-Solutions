@@ -5,5 +5,5 @@ function solution(strArr) {
     countMap.set(value.length, (countMap.get(value.length) || 0) + 1);
   });
 
-  return Math.max(...[...countMap.values()]);
+ return Math.max(...countMap.values());
 }
