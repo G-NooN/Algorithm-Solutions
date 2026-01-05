@@ -47,3 +47,5 @@ const solution = () => {
 
   console.log(year, month);
 };
+
+solution();
