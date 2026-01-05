@@ -54,3 +54,5 @@ const solution = () => {
     arr.length % 2 === index % 2 ? value : value + n
   );
 };
+
+console.log(solution());
