@@ -8,21 +8,41 @@
 // NOTE - 공통 상위 코드
 import { readFileSync } from "fs";
 const input = readFileSync(0).toString().trim();
+const [sum, diff] = input.split(" ").map(Number);
+
+const a = (sum + diff) / 2;
+const b = (sum - diff) / 2;
 
 /**
- * NOTE - 1st Trial (Success)
+ * NOTE - 1st Trial (Fail)
+ * - 실패 원인
+ * : sum, diff 가 반드시 입력된다는 조건을 인지하지 못함
+ * : 0 이 falsy 값으로 처리됨
+ * (반례 : 0 0 => -1)
+ */
+
+const failedSolution1 = () => {
+  console.log(!sum || !diff ? -1 : `${a} ${b}`);
+};
+
+/**
+ * NOTE - 2nd Trial (Fail)
+ * - 실패 원인
+ * : 소수점 처리 누락
+ * (반례 : 5 2 => 3.5 1.5)
+ */
+
+const failedSolution2 = () => {
+  console.log(![sum, diff].every((value) => value >= 0) ? -1 : `${a} ${b}`);
+};
+
+/**
+ * NOTE - 3rd Trial (Success)
  * - 포인트
- * : input 은 두 점수의 합과 차
- * : input 은 반드시 존재
- * : 점수가 정수가 아니거나 음수인 경우 -1 출력
+ * : 점수 유효성 평가 로직 추가 (소수점 및 음수 처리)
  */
 
 const solution = () => {
-  const [sum, diff] = input.split(" ").map(Number);
-
-  const a = (sum + diff) / 2;
-  const b = (sum - diff) / 2;
-
   // 점수 유효성 평가
   const validScore = [a, b].every(
     (value) => Number.isInteger(value) && value >= 0
