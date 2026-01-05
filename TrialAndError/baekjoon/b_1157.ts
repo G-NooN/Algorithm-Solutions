@@ -7,7 +7,7 @@
 
 // NOTE - 공통 상위 코드
 import { readFileSync } from "fs";
-const input = readFileSync("./input.txt").toString().trim();
+const input = readFileSync(0).toString().trim();
 
 // 알파벳 대문자 배열 (A, B, C, ...)
 const alphabetArray = Array.from({ length: 26 }, (_, index) =>

@@ -19,7 +19,7 @@
 
 // NOTE - 공통 상위 코드
 import { readFileSync } from "fs";
-const input = readFileSync("./input.txt").toString().trim();
+const input = readFileSync(0).toString().trim();
 
 /**
  * NOTE - 1st Trial (Success - Partial (1,2,3,4))

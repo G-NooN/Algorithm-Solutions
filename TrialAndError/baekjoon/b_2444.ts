@@ -8,7 +8,7 @@
 // NOTE - 공통 상위 코드
 import { readFileSync } from "fs";
 
-const input = readFileSync("./input.txt").toString().trim();
+const input = readFileSync(0).toString().trim();
 
 const max = Number(input);
 
