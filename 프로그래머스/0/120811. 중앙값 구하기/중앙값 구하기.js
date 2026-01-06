@@ -1,8 +1,5 @@
 function solution(array) {
-    let answer = 0;
-    let sortedArray = array.sort((a, b) => a - b);
-    
-    answer = sortedArray[Math.floor(sortedArray.length / 2)];
-    
-    return answer;
+  return array
+    .sort((a, b) => a - b)
+    .find((_, index) => index === Math.floor(array.length / 2));
 }
