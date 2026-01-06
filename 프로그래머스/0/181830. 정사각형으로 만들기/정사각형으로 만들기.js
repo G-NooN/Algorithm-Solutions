@@ -1,17 +1,10 @@
 function solution(arr) {
-  const valueLength = arr[0].length;
-  const diff = Math.abs(arr.length - valueLength);
+  const maxLength = Math.max(arr.length, arr[0].length);
 
-  if (valueLength > arr.length) {
-    return arr.concat(
-      Array.from({ length: diff }, () =>
-        Array.from({ length: valueLength }, () => 0)
-      )
-    );
-  } else if (valueLength < arr.length) {
-    return arr.map((value) => [
-      ...value,
-      ...Array.from({ length: diff }, () => 0),
-    ]);
-  } else return arr;
+  return Array.from({ length: maxLength }, (_, rowIndex) =>
+    Array.from(
+      { length: maxLength },
+      (_, colIndex) => arr[rowIndex]?.[colIndex] ?? 0
+    )
+  );
 }
