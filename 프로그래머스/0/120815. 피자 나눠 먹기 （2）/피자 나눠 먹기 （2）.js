@@ -1,6 +1,9 @@
 function solution(n) {
-  const getGcd = (dividend, divisor) =>
-    divisor === 0 ? dividend : getGcd(divisor, dividend % divisor);
+  let piece = 6;
 
-  return n / getGcd(n, 6);
+  while (piece % n !== 0) {
+    piece += 6;
+  }
+
+  return piece / 6;
 }
