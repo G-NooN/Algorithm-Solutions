@@ -1,13 +1,13 @@
 function solution(price) {
-  let discount = 1;
+  let discountRate = 0;
 
   if (price >= 500000) {
-    discount = 0.8;
+    discountRate = 0.2;
   } else if (price >= 300000) {
-    discount = 0.9;
+    discountRate = 0.1;
   } else if (price >= 100000) {
-    discount = 0.95;
+    discountRate = 0.05;
   }
 
-  return Math.floor(price * discount);
+  return Math.floor(price - price * discountRate);
 }
