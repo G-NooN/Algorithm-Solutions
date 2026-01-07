@@ -20,16 +20,14 @@ const [numer2, denom2] = [3, 4];
 
 const failedSolution = () => {
   let denom = 1; // 최종 분모
-  let [acc1, acc2] = [1, 1]; // 최종 분모를 만들기 위한 수
 
+  // 각 분모로 나눴을 때 나머지가 모두 0이 되는 최소 최종 분모 계산
   while (denom % denom1 !== 0 || denom % denom2 !== 0) {
     denom++;
   }
 
-  acc1 = denom / denom1;
-  acc2 = denom / denom2;
-
-  const sum = acc1 * numer1 + acc2 * numer2;
+  // 분자 합계
+  const sum = (denom / denom1) * numer1 + (denom / denom2) * numer2;
 
   return [sum, denom];
 };
@@ -37,7 +35,7 @@ const failedSolution = () => {
 /**
  * SECTION 규칙
  *
- * NOTE - 분모의 덧셈 공식
+ * NOTE - 분수의 덧셈 공식
  * : a/b + c/d = (a * d + c * b) / (b * d)
  *
  * NOTE - 유클리드 호제법
@@ -52,7 +50,7 @@ const failedSolution = () => {
 /**
  * NOTE - 2nd Trial (Success)
  * - 포인트
- * : 분모 덧셈 공식 활용
+ * : 분수의 덧셈 공식 활용
  * : 최대공약수 계산 함수 분리
  */
 
