@@ -6,16 +6,17 @@ let result = 0;
 
 switch (input.length) {
   case 2:
-    result = Number(input.slice(0, 1)) + Number(input.slice(1));
+    result = [...input].reduce((acc, current) => acc + Number(current), 0);
     break;
   case 3:
     result =
-      [...input].pop() === "0"
-        ? Number(input.slice(0, 1)) + Number(input.slice(1))
-        : Number(input.slice(0, 2)) + Number(input.slice(2));
+      10 +
+      ([...input].pop() === "0"
+        ? Number(input.slice(0, 1))
+        : Number(input.slice(2)));
     break;
   case 4:
-    result = Number(input.slice(0, 2)) + Number(input.slice(2));
+    result = 20;
     break;
 }
 
