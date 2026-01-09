@@ -1,5 +1,10 @@
 function solution(angle) {
-  if (angle !== 90 && angle !== 180) {
-    return angle > 90 ? 3 : 1;
-  } else return angle === 90 ? 2 : 4;
+  switch (angle) {
+    case 90:
+      return 2;
+    case 180:
+      return 4;
+    default:
+      return angle > 90 ? 3 : 1;
+  }
 }
