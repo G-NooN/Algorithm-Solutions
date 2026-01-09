@@ -27,7 +27,7 @@ const n = 10;
 /**
  * NOTE - 1st Trial (Success)
  * - 포인트
- * : Math.floor() 로 입력한 값 이하의 짝수 최대값 계산
+ * : Math.floor() 로 n/2 의 최대값 계산
  * : 자연수 짝수 합계 공식 적용
  */
 
