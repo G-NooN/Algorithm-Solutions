@@ -33,7 +33,7 @@ const failedSolution = () => {
 };
 
 /**
- * SECTION 규칙
+ * SECTION - 규칙
  *
  * NOTE - 분수의 덧셈 공식
  * : a/b + c/d = (a * d + c * b) / (b * d)
