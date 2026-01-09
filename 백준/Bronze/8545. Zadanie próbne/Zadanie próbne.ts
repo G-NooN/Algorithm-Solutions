@@ -1,5 +1,5 @@
-const fs = require("fs");
+const { readFileSync } = require("fs");
 
-const input = fs.readFileSync(0).toString().trim();
+const input = readFileSync(0).toString().trim();
 
 console.log([...input].reverse().join(""));
