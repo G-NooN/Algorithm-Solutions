@@ -1,6 +1,6 @@
-const fs = require('fs')
+const { readFileSync } = require("fs");
 
-const input = fs.readFileSync(0).toString().trim();
+const input = readFileSync(0).toString().trim();
 
 const alphabets = Array.from({ length: 26 }, (_, index) =>
   String.fromCharCode(97 + index)
