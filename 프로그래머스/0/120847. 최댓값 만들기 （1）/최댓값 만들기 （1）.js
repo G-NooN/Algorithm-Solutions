@@ -1,4 +1,4 @@
 function solution(numbers) {
-  const [a, b] = numbers.sort((a, b) => a - b).slice(-2);
+  const [a, b] = numbers.sort((a, b) => b - a);
   return a * b;
 }
