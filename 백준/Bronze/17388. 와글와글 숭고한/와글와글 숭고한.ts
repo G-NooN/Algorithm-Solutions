@@ -4,22 +4,20 @@ const input = readFileSync(0).toString().trim();
 
 const [s, k, h] = input.split(" ").map(Number);
 
-let result = "OK";
-
-if (s + k + h < 100) {
+if (s + k + h >= 100) {
+  console.log("OK");
+} else {
   const min = Math.min(s, k, h);
 
   switch (min) {
     case s:
-      result = "Soongsil";
+      console.log("Soongsil");
       break;
     case k:
-      result = "Korea";
+      console.log("Korea");
       break;
     case h:
-      result = "Hanyang";
+      console.log("Hanyang");
       break;
   }
 }
-
-console.log(result);
