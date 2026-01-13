@@ -1,11 +1,7 @@
 function solution(box, n) {
-  const sortedBox = box.sort((a, b) => a - b);
+  const [width, length, height] = box;
 
-  let count = 0;
-
-  count = Math.floor(sortedBox[0] / n);
-  count *= Math.floor(sortedBox[1] / n);
-  count *= Math.floor(sortedBox[2] / n);
-
-  return count;
+  return (
+    Math.floor(width / n) * Math.floor(length / n) * Math.floor(height / n)
+  );
 }
