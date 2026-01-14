@@ -1,19 +1,9 @@
 function solution(n) {
-  let result = 0;
+  let array = Array.from({ length: n }, (_, i) => i + 1);
 
-  for (let i = 4; i <= n; i++) {
-    let count = 0;
-
-    for (let j = 2; j < i; j++) {
-      if (i % j === 0) {
-        count++;
-      }
-    }
-
-    if (count > 0) {
-      result++;
-    }
+  for (let i = 2; i * i <= n; i++) {
+    array = array.filter((value) => value % i !== 0 || value <= i);
   }
 
-  return result;
+  return n - array.length;
 }
