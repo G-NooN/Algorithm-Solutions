@@ -1,6 +1,6 @@
 function solution(my_string) {
-  return [...my_string]
-    .filter((value) => !isNaN(value))
+  return my_string
+    .match(/\d/g)
     .map(Number)
-    .sort((a, b) => Number(a) - Number(b));
+    .sort((a, b) => a - b);
 }
