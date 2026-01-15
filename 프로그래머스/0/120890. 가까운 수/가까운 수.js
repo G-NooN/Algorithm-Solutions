@@ -1,6 +1,7 @@
 function solution(array, n) {
-  const sortedArray = array.sort((a, b) => a - b);
-  const targetArray = sortedArray.map((value) => Math.abs(value - n));
+  const [result] = array.sort(
+    (a, b) => Math.abs(a - n) - Math.abs(b - n) || a - b
+  );
 
-  return sortedArray[targetArray.indexOf(Math.min(...targetArray))];
+  return result;
 }
