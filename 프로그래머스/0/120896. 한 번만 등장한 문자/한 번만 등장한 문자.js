@@ -1,10 +1,8 @@
 function solution(s) {
-  const result = [];
+  const result = [...s].filter((letter) => {
+    const regex = new RegExp(letter, "g");
 
-  [...s].forEach((letter) => {
-    if (s.indexOf(letter) === s.lastIndexOf(letter)) {
-      result.push(letter);
-    }
+    return s.match(regex).length === 1;
   });
 
   return result.sort().join("");
