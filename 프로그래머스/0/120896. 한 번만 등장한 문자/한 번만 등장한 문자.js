@@ -1,15 +1,11 @@
 function solution(s) {
-  const stringMap = new Map();
+  const result = [];
 
   [...s].forEach((letter) => {
-    stringMap.set(letter, (stringMap.get(letter) || 0) + 1);
+    if (s.indexOf(letter) === s.lastIndexOf(letter)) {
+      result.push(letter);
+    }
   });
 
-  const oneCountLetters = [...stringMap.keys()]
-    .filter((letter) => stringMap.get(letter) === 1)
-    .sort((a, b) => a.localeCompare(b));
-
-  const result = "".concat(...oneCountLetters);
-
-  return result;
+  return result.sort().join("");
 }
